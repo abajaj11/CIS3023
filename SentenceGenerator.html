@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>HTML</title>
+		<meta name="description" content="">
+		<meta name="author" content="akhilesh-bajaj">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<style>
+			textarea {
+				width:30em;
+				height:20em;
+				border: solid #0000EE;
+			}
+			#generate{
+				border: solid green;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script language="JavaScript1.2">
+			var $ = function(id) {
+				return document.getElementById(id);
+			}//$
+			window.onload = function() {
+				$("generate").onclick = printSent;
+
+			}//onload
+			function printSent() {
+				//alert("in printSent");
+				var articles = ["a", "an", "the"];
+				var subjects = ["cat", "dog", "person", "man", "woman", "car", "bicycle", "animal", "tiger", "fish"];
+				var verbs = ["ran", "jumped", "jumps", "speaks", "moves", "collects", "writes", "types"];
+				var objects = ["cat", "dog", "table", "moon", "cow", "porpoise", "owl", "chair"];
+				var adjectives = ["good", "bad", "nice", "amazing", "super", "fantastic", "better", "best", "gigantic"];
+				var prepositions = ["on", "over", "to", "above", "below", "at", "for", "by", "under", "around", "before"];
+				var sentence = "";
+				sentence+=articles[Math.floor((articles.length * Math.random()))];
+				sentence+=" " + subjects[Math.floor((subjects.length * Math.random()))];
+				sentence+=" " + verbs[Math.floor((verbs.length * Math.random()))];
+				sentence+=" " + prepositions[Math.floor((prepositions.length * Math.random()))];
+				sentence+=" " + articles[Math.floor((articles.length * Math.random()))];
+				sentence+=" " + adjectives[Math.floor((adjectives.length * Math.random()))];
+				sentence+=" " + objects[Math.floor((objects.length * Math.random()))];
+				sentence+=". ";
+                $("essay").value+=sentence;
+			}
+		</script>
+		<div>
+			<header>
+				<h1>HTML</h1>
+			</header>
+			<nav>
+				<p>
+					<a href="/">Home</a>
+				</p>
+				<p>
+					<a href="/contact">Contact</a>
+				</p>
+			</nav>
+
+			<section>
+				<input type="button" id="generate" name="generate" value="generate" />
+				<br>
+				<textarea id="essay" name="essay"></textarea>																
+
+
+
+
+
+			</section>
+
+			<footer>
+				<p>
+					&copy; Copyright  by akhilesh-bajaj
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>

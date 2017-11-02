@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>HTML</title>
+		<meta name="description" content="">
+		<meta name="author" content="akhilesh-bajaj">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>HTML</h1>
+			</header>
+			<nav>
+				<p>
+					<a href="/">Home</a>
+				</p>
+				<p>
+					<a href="/contact">Contact</a>
+				</p>
+			</nav>
+
+			<div>
+				<script language="JavaScript1.2">
+					function printArray(arrName) {
+						var genStr = "";
+						for (var i in arrName)
+						genStr += i + ": " + arrName[i] + "\n";
+						return genStr;
+					}//function
+
+					function printArray1(arrName) {
+						return arrName.join();
+					}
+					 function returnElements(arrName){
+					var str = "";
+					  for(var i=0;i<arrName.length;i++)
+					   str += arrName[i] + "\,";
+					   alert (str);
+					   return str;
+					 }
+					 
+			/*		// Associative array printing
+					 var item = [];
+					 item["itemCode"] = 123;
+					 item["itemName"] = "JavaScript & DOM";
+					 item["itemCost"] = 52.5;
+					 item["itemQuantity"] = 5;
+
+					 alert("Length: " + item.length);
+					 //for(var i =0; i<item.length;i++) alert(item[i]);
+					 alert(printArray(item));
+				*/	 
+					var arr1 = ['a', 'b', 19, 'John', 'Jill', 'z', 'y'];
+					alert(printArray(arr1));
+					var arr2 = [7, 8, 9, 10];
+					alert(printArray(arr2));
+					var arr3 = new Array();
+					arr3 = arr1.splice(1, 3, returnElements(arr2));
+					//arr3 = arr1.splice(1, 3, (arr2.join()).split(",",1));
+					alert(printArray(arr1));
+					alert(printArray(arr3));
+
+					//item["Tax"] = 8.5;
+					//alert(printArray(item));
+
+					/*var output1 = "";
+					 var timesTable = [];
+					 // create an empty array
+					 for (var i = 0; i < 20; i++) {
+					 timesTable[i] = [];
+					 // add 20 empty arrays
+					 }
+					 //Code that adds values to the array of arrays
+					 for (var i = 0; i < timesTable.length; i++) {
+					 for (var j = 0; j < 12; j++) {
+					 timesTable[i][j] = (i + 2) * (j + 1);
+					 }//j
+					 output1 += ((timesTable[i].join("  |  ")) + "\n \n");
+					 }//i
+					 alert(output1);
+					 */
+				</script>
+			</div>
+
+			<footer>
+				<p>
+					&copy; Copyright  by akhilesh-bajaj
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
